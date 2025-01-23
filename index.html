@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Log in</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form>
-        <label for="user">Username</label><br>
-        <input type="text" id="user">
-        <br><br>
-        <label for="pass">Password</label><br>
-        <input type="password" id="pass">
-        <br><br>
-        <input type="submit" value="Submit">
-    </form>
+    <div class="container">
+        <form action="action_page.php" method="post">
+            <label for="user"><strong>Username</strong></label><br>
+            <input type="text" id="user" placeholder="Enter Username">
+            <br><br>
+
+            <label for="pass"><strong>Password</strong></label><br>
+            <input type="password" id="pass" placeholder="Enter Password">
+            <br><br>
+
+            <button type="submit">Log In</button>
+        </form>
+    </div>
 </body>
 </html>
