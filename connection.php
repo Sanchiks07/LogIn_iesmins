@@ -1,13 +1,13 @@
 <?php
 session_start();
 
+
 $servername = "localhost";
-$username = "root";
-$password = "root";
+$dbusername = "root";
+$dbpassword = "root";
 $dbname = "ipb23_sm";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -21,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $sql = "SELECT * FROM users WHERE username = ?";
     $stmt = $conn->prepare($sql);
+
     if (!$stmt) {
         die("SQL error: " . $conn->error);
     }
